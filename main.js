@@ -22,37 +22,39 @@ const rockPaperScissors = (hand1, hand2) => {
   // Use the unit test to see what is expected
 
 
-  if (hand1 == 'rock' && hand2 == 'scissors'){
-  return "Hand one wins!"
-  }
-  else if (hand1 == 'paper' && hand2 == 'rock'){
+  if (hand1 == 'rock' && hand2 == 'scissors') {
     return "Hand one wins!"
   }
-  else if (hand1 == 'scissors' && hand2 == 'papel'){
+  else if (hand1 == 'paper' && hand2 == 'rock') {
     return "Hand one wins!"
   }
-  else if (hand1 == 'rock' && hand2 == 'paper'){
+  else if (hand1 == 'scissors' && hand2 == 'papel') {
+    return "Hand one wins!"
+  }
+  else if (hand1 == 'rock' && hand2 == 'paper') {
     return "Hand two wins!"
   }
-  else if (hand1 == 'scissors' && hand2 == 'rock'){
+  else if (hand1 == 'scissors' && hand2 == 'rock') {
     return "Hand two wins!"
   }
-  else if (hand1 == 'paper' && hand2 == 'scissors'){
+  else if (hand1 == 'paper' && hand2 == 'scissors') {
     return "Hand two wins!"
   }
-  else if (hand1 === hand2){
-    return "It's a tie!"
-  }
-
+  else;
+  return "It's a tie!"
 }
+
+
 
 
 // const rockPaperScissors = (hand1, hand2) => {
 //   if (hand1 == 'scissors' && hand2 == 'paper' || hand1 == 'paper' && hand2 == 'rock' || hand1 == 'rock' && hand2 == 'scissors'){
 //       return "Hand one wins!"
-//     } else if (hand1 == 'scissors' && hand2 == 'rock' || hand1 == 'paper' && hand2 == 'scissors' || hand1 == 'rock' && hand2 == 'paper') {
+//     } 
+//  else if (hand1 == 'scissors' && hand2 == 'rock' || hand1 == 'paper' && hand2 == 'scissors' || hand1 == 'rock' && hand2 == 'paper') {
 //       return "Hand two wins!"
-//      } else if (hand1 === hand2){
+//      }
+// else;
 //        return "It's a tie!"
 //      }
 //   }
@@ -67,7 +69,7 @@ const rockPaperScissors = (hand1, hand2) => {
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
     rl.question('hand2: ', (answer2) => {
-      console.log( rockPaperScissors(answer1, answer2) );
+      console.log(rockPaperScissors(answer1, answer2));
       getPrompt();
     });
   });
