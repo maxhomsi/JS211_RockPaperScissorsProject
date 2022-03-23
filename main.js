@@ -17,34 +17,34 @@ const rl = readline.createInterface({
 //Robert and I did together, I did one way and he did another way . both works (second way after this one)
 
 const rockPaperScissors = (hand1, hand2) => {
+let h1 = hand1.toLowerCase().trim()
+let h2 = hand2.toLowerCase().trim()
 
   // Write code here
   // Use the unit test to see what is expected
 
 
-  if (hand1 == 'rock' && hand2 == 'scissors') {
+  if (h1 == 'rock' && h2 == 'scissors') {
     return "Hand one wins!"
   }
-  else if (hand1 == 'paper' && hand2 == 'rock') {
+  else if (h1 == 'paper' && h2 == 'rock') {
     return "Hand one wins!"
   }
-  else if (hand1 == 'scissors' && hand2 == 'papel') {
+  else if (h1 == 'scissors' && h2 == 'papel') {
     return "Hand one wins!"
   }
-  else if (hand1 == 'rock' && hand2 == 'paper') {
+  else if (h1 == 'rock' && h2 == 'paper') {
     return "Hand two wins!"
   }
-  else if (hand1 == 'scissors' && hand2 == 'rock') {
+  else if (h1 == 'scissors' && h2 == 'rock') {
     return "Hand two wins!"
   }
-  else if (hand1 == 'paper' && hand2 == 'scissors') {
+  else if (h1 == 'paper' && h2 == 'scissors') {
     return "Hand two wins!"
   }
   else;
   return "It's a tie!"
 }
-
-
 
 
 // const rockPaperScissors = (hand1, hand2) => {
@@ -93,9 +93,9 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('rock', 'scissors'), "Hand one wins!");
     });
     it('should scrub input to ensure lowercase with "trim"ed whitepace', () => {
-      assert.equal(rockPaperScissors('rock', 'paper'), "Hand two wins!");
-      assert.equal(rockPaperScissors('paper', 'scissors'), "Hand two wins!");
-      assert.equal(rockPaperScissors('rock', 'scissors'), "Hand one wins!");
+      assert.equal(rockPaperScissors('rOcK', ' paper '), "Hand two wins!");
+      assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
+      assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
     });
   });
 } else {
